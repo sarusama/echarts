@@ -6,7 +6,6 @@ import echarts from "echarts";
 
 Vue.prototype.$echarts = echarts;
 
-
 const _Vue = new Vue({
 	el: "#root",
 	store,
