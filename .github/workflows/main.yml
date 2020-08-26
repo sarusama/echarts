@@ -20,16 +20,13 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    - uses: actions/checkout@master
+    - name: checkout
+      uses: actions/checkout@master
 
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: JamesIves/github-pages-deploy-action@master
       env:
         ACCESS_TOKEN: ${{ secrets.RSA }}
-        BASE_BRANCH: master
         BRANCH: gh-pages
         FOLDER: docs
+        BUILD_SCRIPT: npm ci && npm run build # 执行的命令
