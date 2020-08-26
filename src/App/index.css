@@ -1,0 +1,32 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+#root {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+.echarts-tabs {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	border-bottom: 1px solid rgba(135, 135, 135, 1);
+}
+.echarts-tab {
+	padding: 10px;
+}
+.echarts-tab.active {
+	color: orange;
+	position: relative;
+	box-shadow: inset 0 -2px orange;
+}
+.main {
+	min-height: 0;
+	flex: 1;
+}

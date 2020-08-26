@@ -1,0 +1,29 @@
+.echarts-index {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 100%;
+}
+.echarts-button {
+	flex: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.echarts-button-main {
+	width: 90%;
+	transition: all 1s ease;
+	padding: 90% 0 0 0;
+	border-radius: 8px;
+}
+.echarts-button-main:hover {
+	box-shadow: 0 0 20px 4px rgba(153, 153, 153, 1);
+}
+.echarts-button-text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
