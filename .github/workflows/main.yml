@@ -25,11 +25,11 @@ jobs:
 
     - name: npm install, build, and test
       run: |
-        npm install
+        npm ci
         npm run build
+
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
-      env:
-        PERSONAL_TOKEN: ${{ secrets.RSA }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: docs
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.RSA }}
+        publish_dir: docs
