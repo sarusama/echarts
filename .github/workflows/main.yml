@@ -27,8 +27,8 @@ jobs:
         npm install
         npm run build
     - name: Deploy
-      uses: JamesIves/github-pages-deploy-action@master
+      uses: peaceiris/actions-gh-pages@v3
       env:
-        ACCESS_TOKEN: ${{ secrets.RSA }}
-        BRANCH: gh-pages
-        FOLDER: docs
+        personal_token: ${{ secrets.RSA }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./docs
