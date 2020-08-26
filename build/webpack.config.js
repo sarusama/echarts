@@ -8,7 +8,7 @@ module.exports = {
 		app: path.resolve(__dirname, "../src/index.js")
 	},
 	output: {
-		path: path.resolve(__dirname, "../dist"),
+		path: path.resolve(__dirname, "../docs"),
 		filename: "[name].js",
 		publicPath: "/"
 	},
@@ -22,7 +22,8 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "public/index.html",
-			inject: true
+			inject: true,
+			filename: path.resolve(__dirname, "../docs/index.html")
 		}),
 		new VueLoaderPlugin()
 	],
