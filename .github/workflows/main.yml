@@ -29,6 +29,6 @@ jobs:
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       env:
-        personal_token: ${{ secrets.RSA }}
+        PERSONAL_TOKEN: ${{ secrets.RSA }}
         PUBLISH_BRANCH: gh-pages
         PUBLISH_DIR: ./docs
